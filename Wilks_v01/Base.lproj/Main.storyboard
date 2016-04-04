@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ore-s1-TVJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LSS-CH-MJl">
+            <objects>
+                <navigationController id="Ore-s1-TVJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hnQ-jQ-E5L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EfM-9Q-4WQ" kind="relationship" relationship="rootViewController" id="cc8-YG-Ksp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUV-Rg-YKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281.06666666666666" y="248.02666666666667"/>
+        </scene>
+        <!--New Person View Controller-->
+        <scene sceneID="ozF-sg-PnB">
+            <objects>
+                <viewController storyboardIdentifier="NewPersonViewController" id="y1L-em-0hp" customClass="NewPersonViewController" customModule="Wilks_v01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y3S-CM-ws5"/>
+                        <viewControllerLayoutGuide type="bottom" id="P7o-26-gtG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fo5-xY-DQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-q0-Tr1">
+                                <rect key="frame" x="20" y="122" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-XP-SRK">
+                                <rect key="frame" x="197" y="124" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPerson" translatesAutoresizingMaskIntoConstraints="NO" id="u0S-rd-J62">
+                                <rect key="frame" x="7" y="171" width="307" height="331"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNa-ow-y04">
+                                <rect key="frame" x="273" y="538" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="save:" destination="y1L-em-0hp" eventType="touchUpInside" id="aDp-G5-EQs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-EK-kIx">
+                                <rect key="frame" x="7" y="538" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="y1L-em-0hp" eventType="touchUpInside" id="RVv-Kz-2Yh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jI2-Mt-R8x">
+                                <rect key="frame" x="197" y="60" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="y1L-em-0hp" eventType="touchUpInside" id="1HW-DD-503"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InQ-dT-Zr5">
+                                <rect key="frame" x="21" y="65" width="44" height="30"/>
+                                <state key="normal" title="Album"/>
+                                <connections>
+                                    <action selector="albumPressed:" destination="y1L-em-0hp" eventType="touchUpInside" id="CRk-Hg-TNb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="genderControl" destination="TMM-XP-SRK" id="dKN-cV-dty"/>
+                        <outlet property="nameTextField" destination="7o7-q0-Tr1" id="amJ-uW-MWc"/>
+                        <outlet property="pesonImage" destination="u0S-rd-J62" id="3Tn-fV-nxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRr-WV-6mo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500.80000000000001" y="-135.37333333333333"/>
+        </scene>
+        <!--Wilks -->
+        <scene sceneID="pv5-MO-4xj">
+            <objects>
+                <tableViewController storyboardIdentifier="TableViewController" id="EfM-9Q-4WQ" customClass="TableViewController" customModule="Wilks_v01" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8US-b8-KZI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="PyM-6C-Rif">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PyM-6C-Rif" id="RSH-h6-sVm">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EfM-9Q-4WQ" id="mse-xk-Fxi"/>
+                            <outlet property="delegate" destination="EfM-9Q-4WQ" id="8dE-JD-rlp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Wilks " id="sKJ-3g-I3d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83X-BY-8W6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.59999999999999" y="248.02666666666667"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="defaultPerson" width="626" height="626"/>
+    </resources>
+</document>
